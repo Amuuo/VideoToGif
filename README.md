@@ -1,50 +1,104 @@
-# React + TypeScript + Vite
+# Video to GIF Converter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React application that allows users to convert video files to GIF format directly in the browser using FFmpeg WebAssembly. Built with React, TypeScript, Material-UI, and Vite.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🎥 Convert video files to GIF format
+- ⚡ Browser-based conversion (no server upload needed)
+- 🎨 Customizable conversion options:
+  - Start time
+  - Duration
+  - Output width
+  - FPS (Frames Per Second)
+  - Quality settings
+- 🌓 Dark/Light theme support
+- 📱 Responsive design
+- 🎯 Drag and drop file upload
 
-## Expanding the ESLint configuration
+## Prerequisites
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Node.js >= 18
+- npm or yarn
 
-- Configure the top-level `parserOptions` property like this:
+## Installation
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd react-gif-app
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+2. Install dependencies:
+```bash
+npm install
 ```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+The application will be available at `http://localhost:5173`
+
+## Technology Stack
+
+- React 18
+- TypeScript
+- Vite
+- Material-UI (MUI)
+- FFmpeg WebAssembly
+- @ffmpeg/ffmpeg
+- @ffmpeg/core
+- @ffmpeg/util
+- Emotion (for styled components)
+
+## Project Structure
+
+```
+src/
+├── components/        # React components
+├── contexts/         # React contexts (Theme, Video)
+├── styles/          # Global styles and theme
+├── assets/          # Static assets
+└── App.tsx          # Main application component
+```
+
+## Development
+
+To start the development server with hot reload:
+
+```bash
+npm run dev
+```
+
+To build for production:
+
+```bash
+npm run build
+```
+
+To run tests:
+
+```bash
+npm run test
+```
+
+## Browser Compatibility
+
+The application requires a modern browser that supports:
+- WebAssembly
+- SharedArrayBuffer
+- Cross-Origin Isolation
+
+## License
+
+MIT License
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a new Pull Request
