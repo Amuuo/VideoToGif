@@ -19,7 +19,7 @@
     "@ffmpeg/ffmpeg": "^0.12.10",
     "@ffmpeg/util": "^0.12.2",
     "@mui/icons-material": "^5.15.10",
-    "@mui/material": "^5.15.10",
+    "@mui/material": "^5.16.14",
     "firebase": "^10.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
